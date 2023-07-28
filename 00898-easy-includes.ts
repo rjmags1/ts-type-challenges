@@ -25,7 +25,7 @@ type cases = [
 ];
 
 // ============= Your Code Here =============
-type Includes<T extends readonly any[], U> = T extends [infer H, ...infer Rest]
+type Includes<T extends any[], U> = T extends [infer H, ...infer Rest]
     ? Equal<H, U> extends true
         ? true
         : Includes<Rest, U>
